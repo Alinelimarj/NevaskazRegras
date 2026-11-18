@@ -155,3 +155,15 @@ footer small{color:#778278}
 .pve-banner p{margin:0;color:#d0d4cd}
 @media(max-width:850px){.document-shell{grid-template-columns:1fr}.document-toc{position:relative;top:auto;max-height:260px}}
 @media(max-width:520px){.hero{min-height:590px}.document-hero{padding:56px 22px 38px}.document-shell{padding:25px 14px 55px;gap:18px}.document-content{padding:20px}.document-content p,.document-content li{font-size:13px}}
+
+
+/* Índice dos documentos: lista vertical, sem rolagem horizontal */
+.document-toc{min-width:0;overflow-x:hidden;overflow-y:auto}
+.document-toc nav{display:block;min-width:0;width:100%;gap:0;flex-direction:column;align-items:stretch}
+.document-toc nav a{display:block;width:100%;min-width:0;padding:8px 0;white-space:normal;overflow-wrap:anywhere;word-break:normal;line-height:1.45}
+.document-toc nav p{color:var(--muted);font-size:12px}
+.document-shell{align-items:start}
+.document-content{min-width:0;overflow-wrap:anywhere}
+@media(max-width:850px){
+  .document-toc{position:relative;top:auto;max-height:300px}
+}
