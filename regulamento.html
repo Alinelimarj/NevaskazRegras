@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Regulamento oficial da Nevaska Z Roleplay: sobrevivência, PVE, PVP, economia, clãs e eventos.">
+  <title>Regulamento Oficial | Nevaska Z Roleplay</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="top-line"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Nevaska Z — início">
+      <span class="brand-mark">☣</span>
+      <span><strong>NEVASKA <em>Z</em></strong><small>PROJETANDO HISTÓRIAS</small></span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="index.html#sobrevivencia">Sobrevivência</a>
+      <a href="regulamento.html" aria-current="page">Regulamento</a>
+      <a href="https://discord.gg/xMF8pbSpge" target="_blank" rel="noopener noreferrer">Discord</a>
+    </nav>
+  </header>
+  <main>
+    <section class="document-hero">
+      <div class="document-hero-inner">
+        <span class="eyebrow"><span></span> DOCUMENTAÇÃO DO SOBREVIVENTE</span>
+        <h1>REGULAMENTO <span>OFICIAL</span></h1>
+        <p>Conheça as normas da Nevaska Z Roleplay. Leia as regras antes de iniciar sua jornada e consulte o índice para encontrar cada assunto.</p>
+        <a class="primary-button" href="index.html">VOLTAR À PÁGINA INICIAL <b>↗</b></a>
+      </div>
+    </section>
+    <section class="document-shell">
+      <aside class="document-toc" aria-label="Índice do regulamento">
+        <strong>ÍNDICE DO REGULAMENTO</strong>
+        <nav id="toc"><p>Carregando índice...</p></nav>
+      </aside>
+      <article class="document-content" id="document-content" aria-live="polite">
+        <p>Carregando o regulamento oficial...</p>
+      </article>
+    </section>
+  </main>
+  <footer><div class="footer-brand">☣ NEVASKA <span>Z</span></div><p>O mundo caiu. Os sobreviventes continuaram.</p><small>NEVASKA Z ROLEPLAY — PROJETANDO HISTÓRIAS</small></footer>
+  <script>
+    (async function () {
+      const content = document.getElementById('document-content');
+      const toc = document.getElementById('toc');
+      try {
+        if (!window.marked) throw new Error('O formatador do documento não foi carregado.');
+        const response = await fetch('regulamento-oficial.md');
+        if (!response.ok) throw new Error('Não foi possível carregar o regulamento (' + response.status + ').');
+        const markdown = await response.text();
+        content.innerHTML = marked.parse(markdown);
+        const headings = Array.from(content.querySelectorAll('h1, h2, h3'))
+          .filter((heading) => /^\d{2}\./.test(heading.textContent.trim()));
+        toc.innerHTML = '';
+        headings.forEach((heading, index) => {
+          const id = 'secao-' + String(index + 1).padStart(2, '0');
+          heading.id = id;
+          const link = document.createElement('a');
+          link.href = '#' + id;
+          link.textContent = heading.textContent.trim();
+          toc.appendChild(link);
+        });
+        if (!headings.length) toc.textContent = 'Índice indisponível.';
+      } catch (error) {
+        content.innerHTML = '<h2>Não foi possível abrir o regulamento</h2><p>' +
+          String(error.message).replace(/[&<>"]/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[char])) +
+          '</p><p>Você também pode consultar o <a href="regulamento-oficial.md">arquivo original do regulamento</a> ou voltar à <a href="index.html">página inicial</a>.</p>';
+        toc.textContent = 'Índice indisponível.';
+      }
+    })();
+  </script>
+</body>
+</html>
