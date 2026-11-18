@@ -100,6 +100,12 @@ Ao entrar e permanecer na NEVASKA Z, o jogador declara que:
 
 O desconhecimento das regras não isenta o jogador de responsabilidade.
 
+### WHITELIST — LIBERAÇÃO DENTRO DO SERVIDOR
+
+A whitelist da NEVASKA Z é realizada **dentro do próprio servidor**. O jogador deverá entrar no servidor e seguir as orientações apresentadas pelo sistema de whitelist para concluir sua liberação.
+
+A whitelist não é realizada por formulário externo neste procedimento. Em caso de dificuldade ou falha no sistema, o jogador deverá procurar os canais oficiais de suporte da NEVASKA Z.
+
 A administração poderá atualizar o regulamento sempre que necessário.
 
 
