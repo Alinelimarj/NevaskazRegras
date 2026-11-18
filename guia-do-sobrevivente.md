@@ -147,6 +147,10 @@ Também é proibido bloquear entradas, saídas, corredores, estradas, pontos de 
 
 ## 11. Ranchos
 
+O acesso à criação de um Rancho depende da **licença de Rancho**, vendida pelo **Fazendeiro**. Procure esse NPC para adquirir a licença necessária antes de iniciar seu Rancho.
+
+O Fazendeiro vende somente a licença do Rancho. Ele não é responsável pela fabricação de sabonete nem pelo sistema de higiene.
+
 Os Ranchos são propriedades voltadas ao desenvolvimento e à sobrevivência. Podem ser utilizados para cultivo, produção, armazenamento, organização e criação de histórias.
 
 Não invada Ranchos protegidos, não destrua estruturas, não remova portas ou paredes, não roube recursos ou veículos e não atravesse construções por glitches.
@@ -253,9 +257,11 @@ O Guarda-Roupas de Clã serve para organizar roupas e equipamentos do grupo. O a
 
 ## 27. Banho, banheiro e higiene
 
-Os sistemas de banho e banheiro foram mencionados como parte da experiência de sobrevivência, mas os comandos, locais, necessidades e efeitos específicos ainda não constam no material recebido.
+A higiene faz parte da sobrevivência. Para utilizar o sistema de banho, o sobrevivente deve providenciar o **sabonete**, produzido por crafting na **Mesa Médica**.
 
-Consulte o tutorial ou as instruções apresentadas no jogo para utilizar essas funções corretamente. Não presuma efeitos ou penalidades que não tenham sido informados oficialmente.
+O sabonete não é comprado do Fazendeiro: sua fabricação é feita na Mesa Médica, conforme os ingredientes e requisitos apresentados pela própria bancada.
+
+Os comandos, locais de banho, necessidades e efeitos específicos devem ser conferidos nas instruções exibidas pelo sistema dentro do jogo. Não presuma receitas, quantidades ou penalidades que não tenham sido informadas oficialmente.
 
 ## 28. Descanso e sistema de dormir
 
