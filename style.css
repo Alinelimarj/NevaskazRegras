@@ -67,3 +67,91 @@ footer small{font-size:9px;letter-spacing:3px;color:#716a6a}
 @media(max-width:900px){.hero-stamp{right:-65px;opacity:.25}.feature-grid{grid-template-columns:repeat(2,1fr)}.site-header{padding-left:24px;padding-right:24px}}
 @media(max-width:700px){.site-header{height:auto;min-height:75px;align-items:flex-start;gap:18px;padding-top:17px;padding-bottom:17px}nav{gap:12px;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:10px}.intro{grid-template-columns:1fr;gap:16px}.section{padding-top:65px;padding-bottom:65px}}
 @media(max-width:520px){.site-header{display:block}.site-header nav{margin-top:15px;justify-content:flex-start}.hero{min-height:520px;padding-top:75px;padding-bottom:75px}.hero-stamp{display:none}.feature-grid{grid-template-columns:1fr}.document-card{padding:19px;gap:15px}.document-icon{width:39px;height:39px;flex-basis:39px}.hero-content>p{font-size:14px}}
+
+
+/* IDENTIDADE VISUAL — SOBREVIVÊNCIA PÓS-APOCALÍPTICA */
+:root{
+  --bg:#050606;--bg-soft:#0a0d0c;--panel:#101412;--panel-hover:#171d19;
+  --blood:#790d13;--red:#a71920;--red-bright:#d02a32;--text:#e8e9e4;
+  --muted:#a2aaa2;--line:#29312b;--content:1180px;
+}
+body{
+  background-color:#050606;
+  background-image:radial-gradient(ellipse at 50% -15%,#29332b44,transparent 55%),
+    repeating-linear-gradient(0deg,#ffffff03 0 1px,transparent 1px 4px);
+}
+.top-line{height:3px;background:linear-gradient(90deg,#18251c,#6f1017,#c22a31,#6f1017,#18251c)}
+.site-header{background:#070a08ed;border-bottom-color:#303b32}
+.brand-mark{color:#c6c9bb;text-shadow:0 0 18px #a7192044}
+.brand strong{letter-spacing:3px}
+.brand small{color:#8c998d}
+nav a{color:#b8c0b8}
+.hero{
+  min-height:680px;
+  background:
+    linear-gradient(90deg,#050706 0%,#070a08e8 42%,#080a08a8 100%),
+    radial-gradient(ellipse at 78% 54%,#6c101b66,transparent 34%),
+    repeating-linear-gradient(135deg,transparent 0 36px,#b8c4b008 37px 38px),
+    linear-gradient(135deg,#172019,#090b09 58%,#1b0b0e);
+}
+.hero:before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.3;
+  background:linear-gradient(180deg,transparent 65%,#020302 100%),
+    repeating-linear-gradient(90deg,transparent 0 115px,#c8d0c808 116px 117px);
+}
+.hero:after{
+  background:radial-gradient(ellipse at 80% 50%,transparent 0 20%,#05070666 70%),
+    repeating-linear-gradient(135deg,transparent 0 42px,#ffffff05 43px 44px);
+}
+.eyebrow,.section-kicker,.document-label{color:#d34a4f}
+h1{text-shadow:0 5px 30px #000}
+h1 span,h2 span{color:#c52831}
+.hero-content>p{color:#c0c7bf}
+.primary-button{background:linear-gradient(135deg,#8d151d,#4e0a10);border-color:#a72a31}
+.primary-button:hover{background:linear-gradient(135deg,#b8202a,#720e17);border-color:#dc454c}
+.hero-stamp{border-color:#b1b8a52c;color:#a7ad9b;opacity:.62}
+.hero-stamp:before,.hero-stamp:after{border-color:#a7ad9b30}
+.hero-stamp strong{color:#a71b25;text-shadow:0 0 38px #b5121b66}
+.section{border-top-color:#263029}
+.intro,.features,.documents{position:relative}
+.features{background:linear-gradient(180deg,#090d0a,#0b100d)}
+.feature{background:linear-gradient(145deg,#151b16,#0b0f0c);border-color:#2b352d;border-top-color:#7b171d}
+.feature:hover{border-color:#8b3035;background:#171c18}
+.feature>span{color:#d34a4f}
+.document-card{background:linear-gradient(110deg,#151a16,#0a0d0b);border-color:#2b352d;border-left-color:#a51b24}
+.document-card:hover{border-color:#8b3035}
+.document-icon{background:#1b1715;border-color:#563035;color:#df5559}
+.document-copy a{color:#e05a60}
+footer{background:#030504;border-top-color:#29332c}
+.footer-brand span{color:#c52831}
+footer p{color:#aeb7ae}
+footer small{color:#778278}
+
+/* Componentes das páginas de documentos */
+.document-hero{padding:76px 24px 54px;background:linear-gradient(115deg,#0b100c,#170b0e);border-bottom:1px solid var(--line)}
+.document-hero-inner{max-width:var(--content);margin:auto}
+.document-hero h1{font-size:clamp(34px,5vw,58px);margin:14px 0}
+.document-hero p{max-width:760px;color:var(--muted)}
+.document-shell{max-width:var(--content);margin:0 auto;padding:48px 24px 90px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:34px}
+.document-toc{align-self:start;position:sticky;top:108px;max-height:calc(100vh - 130px);overflow:auto;padding:20px;background:#0d120f;border:1px solid var(--line)}
+.document-toc strong{display:block;color:#df5559;font-size:11px;letter-spacing:2px;margin-bottom:12px}
+.document-toc a{display:block;padding:6px 0;color:#aeb7ae;text-decoration:none;font-size:12px;border-bottom:1px solid #ffffff09}
+.document-toc a:hover{color:#fff}
+.document-content{min-width:0;padding:clamp(22px,4vw,46px);background:#0d110e;border:1px solid var(--line);box-shadow:0 18px 60px #0008}
+.document-content h1,.document-content h2,.document-content h3{scroll-margin-top:110px}
+.document-content h1{font-size:clamp(28px,4vw,42px);letter-spacing:-1px}
+.document-content h2{font-size:clamp(21px,3vw,29px);margin-top:46px;padding-top:18px;border-top:1px solid var(--line)}
+.document-content h3{font-size:16px;color:#e05a60;margin-top:28px}
+.document-content p,.document-content li{color:#c0c7bf;font-size:14px}
+.document-content li{margin:5px 0}
+.document-content blockquote{margin:24px 0;padding:15px 20px;border-left:3px solid var(--red);background:#171311;color:#e5dedd}
+.document-content hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+.document-content table{width:100%;border-collapse:collapse;font-size:13px}
+.document-content th,.document-content td{padding:10px;border:1px solid var(--line);text-align:left}
+.document-content th{background:#1a211b;color:#f0dfe0}
+.document-back{display:inline-block;margin-top:24px;color:#e05a60;text-decoration:none;font-size:12px;font-weight:800}
+.pve-banner{margin:28px 0;padding:22px;border:1px solid #5a282c;background:linear-gradient(110deg,#171211,#0d120e)}
+.pve-banner strong{display:block;color:#ef6268;letter-spacing:2px;font-size:13px;margin-bottom:7px}
+.pve-banner p{margin:0;color:#d0d4cd}
+@media(max-width:850px){.document-shell{grid-template-columns:1fr}.document-toc{position:relative;top:auto;max-height:260px}}
+@media(max-width:520px){.hero{min-height:590px}.document-hero{padding:56px 22px 38px}.document-shell{padding:25px 14px 55px;gap:18px}.document-content{padding:20px}.document-content p,.document-content li{font-size:13px}}
