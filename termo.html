@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Consulte as condições de contribuição, benefícios, prazo e solicitação de reembolso da loja Nevaska Z.">
+  <title>Termo de Doação e Reembolso | Nevaska Z Roleplay</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="top-line"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Nevaska Z — início">
+      <span class="brand-mark">☣</span>
+      <span><strong>NEVASKA <em>Z</em></strong><small>PROJETANDO HISTÓRIAS</small></span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="index.html#sobrevivencia">Sobrevivência</a>
+      <a href="regulamento.html">Regulamento</a>
+      <a href="termo.html" aria-current="page">Termo de Doação</a>
+      <a href="https://discord.gg/xMF8pbSpge" target="_blank" rel="noopener noreferrer">Discord</a>
+    </nav>
+  </header>
+  <main>
+    <section class="document-hero">
+      <div class="document-hero-inner">
+        <span class="eyebrow"><span></span> CENTRAL DE INFORMAÇÕES §</span>
+        <h1>TERMO DE DOAÇÃO E REEMBOLSO <span>NEVASKA Z</span></h1>
+        <p>Consulte as condições de contribuição, benefícios, prazo e solicitação de reembolso da loja Nevaska Z.</p>
+        <a class="primary-button" href="index.html#documentos">VOLTAR À CENTRAL DE INFORMAÇÕES <b>↗</b></a>
+      </div>
+    </section>
+    <section class="document-shell">
+      <aside class="document-toc" aria-label="Índice do documento">
+        <strong>ÍNDICE DO DOCUMENTO</strong>
+        <nav id="toc"><p>Carregando índice...</p></nav>
+      </aside>
+      <article class="document-content" id="document-content" aria-live="polite">
+        <p>Carregando documento...</p>
+      </article>
+    </section>
+  </main>
+  <footer><div class="footer-brand">☣ NEVASKA <span>Z</span></div><p>O mundo caiu. Os sobreviventes continuaram.</p><small>NEVASKA Z ROLEPLAY — PROJETANDO HISTÓRIAS</small></footer>
+  <script>
+    (async function () {
+      const content = document.getElementById('document-content');
+      const toc = document.getElementById('toc');
+      try {
+        if (!window.marked) throw new Error('O formatador do documento não foi carregado.');
+        const response = await fetch('termo-de-doacao-e-reembolso.md');
+        if (!response.ok) throw new Error('Não foi possível carregar o documento (' + response.status + ').');
+        const markdown = await response.text();
+        content.innerHTML = marked.parse(markdown);
+        const headings = Array.from(content.querySelectorAll('h1, h2, h3'))
+          .filter((heading) => heading.textContent.trim().length > 0);
+        toc.innerHTML = '';
+        headings.forEach((heading, index) => {
+          const id = 'topico-' + String(index + 1).padStart(2, '0');
+          heading.id = id;
+          const link = document.createElement('a');
+          link.href = '#' + id;
+          link.textContent = heading.textContent.trim();
+          toc.appendChild(link);
+        });
+        if (!headings.length) toc.textContent = 'Índice indisponível.';
+      } catch (error) {
+        const message = String(error.message).replace(/[&<>"]/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[char]));
+        content.innerHTML = '<h2>Não foi possível abrir o documento</h2><p>' + message +
+          '</p><p>Volte à <a href="index.html">página inicial</a> ou consulte o <a href="termo-de-doacao-e-reembolso.md">arquivo original</a>.</p>';
+        toc.textContent = 'Índice indisponível.';
+      }
+    })();
+  </script>
+</body>
+</html>
