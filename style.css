@@ -167,3 +167,37 @@ footer small{color:#778278}
 @media(max-width:850px){
   .document-toc{position:relative;top:auto;max-height:300px}
 }
+
+
+/* AJUSTE TIPOGRÁFICO — LEITURA MAIS ELEGANTE E PROPORCIONAL */
+body{font-size:14px;line-height:1.6}
+h1{font-size:clamp(36px,5.2vw,64px);line-height:1.04;letter-spacing:-2px}
+h2{font-size:clamp(23px,2.6vw,33px);line-height:1.2;letter-spacing:.5px}
+h3{font-size:15px;line-height:1.35}
+.hero{min-height:590px}
+.hero-content>p{font-size:14px;line-height:1.7}
+.hero-stamp{width:220px;height:220px}
+.hero-stamp strong{font-size:118px}
+.section{padding-top:70px;padding-bottom:70px}
+.feature h3{font-size:13px}
+.feature p,.document-copy p{font-size:12px;line-height:1.65}
+.document-hero{padding-top:60px;padding-bottom:42px}
+.document-hero h1{font-size:clamp(30px,4.2vw,46px);letter-spacing:-1.2px}
+.document-hero p{font-size:13px;line-height:1.65}
+.document-toc strong{font-size:10px}
+.document-toc a{font-size:11px;line-height:1.5}
+.document-content{padding:clamp(20px,3vw,36px)}
+.document-content h1{font-size:clamp(26px,3.4vw,36px);letter-spacing:-.8px}
+.document-content h2{font-size:clamp(19px,2.3vw,25px);margin-top:36px}
+.document-content h3{font-size:14px}
+.document-content p,.document-content li{font-size:13px;line-height:1.7}
+.document-content table{font-size:12px}
+.document-back{font-size:11px}
+@media(max-width:520px){
+  h1{font-size:clamp(32px,9vw,43px);letter-spacing:-1.2px}
+  h2{font-size:23px}
+  .hero{min-height:510px}
+  .hero-content>p{font-size:13px}
+  .section{padding-top:54px;padding-bottom:54px}
+  .document-content p,.document-content li{font-size:12px}
+}
